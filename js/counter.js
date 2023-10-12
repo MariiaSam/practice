@@ -2,13 +2,15 @@ const items = document.querySelectorAll(".countdown-item > h4")
 console.log(items)
 
 const countDownEl = document.querySelector(".countdown")
-
+console.log(countDownEl)
 
 let countDownDate = new Date (2024, 7, 10, 0, 0).getTime()// відлік часу
 console.log(countDownDate);
 
 function getCountTime(){
 const now = new Date().getTime();// отримати поточний час
+console.log(now);
+
 
 //знайти різницю часу
 const dist = countDownDate - now
@@ -29,7 +31,7 @@ let hours = Math.floor((dist % oneDay) / oneHour)
 let minutes = Math.floor((dist % oneHour) /oneMinute)
 let seconds =  Math.floor((dist % oneMinute) /1000)
 
-const values = [days, hours, minutes , seconds]
+const values = [days, hours, minutes, seconds]
 console.log(values);
 
 //додаємо значення на сторінку
