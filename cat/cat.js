@@ -1,8 +1,9 @@
 'use strict';
  
- const btn = document.querySelector('.btn')
+ const btn = document.querySelector(".btn")
  const image = document.querySelector(".img")
- const url = "http://aws.random.cat/meow"
+ console.log(image)
+ const url = 'https://aws.random.cat/meow'// помилка 403
 
  //функція, яка створює запиит на сервер  Fetch
 
@@ -11,6 +12,7 @@
         const response = await fetch(url);
         const data = await response.json()
         image.src = data.file
+       console.log(response)
     } catch (error) {
         console.log(error);
     }
